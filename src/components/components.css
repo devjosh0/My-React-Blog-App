@@ -1,0 +1,13 @@
+ .btn{
+    background-color: aqua;
+    border-radius: 20%;
+    cursor: pointer;
+ }
+ .obj{
+    position: relative;
+    margin-left: 42%;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    box-shadow: 5px 2px black;
+ }

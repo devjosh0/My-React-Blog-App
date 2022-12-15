@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
 
+import Cars from './components/components';
+import {Car,Counter} from './components/components'
+import List from './components/useState';
+import{Try1} from './components/useState';
+import './components/components.css'
+import Btn from './components/stateful-vs-stateless';
+import Navbar from './components/navbar';
+import Home from './components/homepage';
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+<div className="content">
+  <Home/>
+</div>
     </div>
   );
 }
-
+/**<Cars />
+<Car/>
+<Counter/>
+<List/>
+<Try1/>
+<Btn/> */
 export default App;
