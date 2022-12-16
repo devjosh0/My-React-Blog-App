@@ -17,3 +17,4 @@ export default function Bloglist({blog,title,handleDelete}){
     )
    
 }
+//The handleDelete() is call in button with parameter(item.id to access each element)
