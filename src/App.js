@@ -7,18 +7,20 @@ import './components/components.css'
 import Btn from './components/stateful-vs-stateless';
 import Navbar from './components/navbar';
 import Home from './components/homepage';
+import Hub from './components/try';
 function App() {
 
   return (
     <div className="App">
       <Navbar/>
 <div className="content">
-  <Home/>
+<Home/>
 </div>
     </div>
   );
 }
 /**<Cars />
+ <Hub/>
 <Car/>
 <Counter/>
 <List/>

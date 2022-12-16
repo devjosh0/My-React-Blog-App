@@ -38,7 +38,7 @@ margin-right: 50%;
 }
 .blog-preview{
   width: 300%;
-  margin-bottom: 4em;
+  margin-bottom: 3em;
   font-family: var(--font);
 }
 .blog-preview:hover{
@@ -58,4 +58,18 @@ font-size: 1.5em;
 }
 .props{
 margin-bottom: 2em;
+}
+.del{
+  height: 3em;
+  width: 10em;
+  margin-bottom: 1em;
+  transition: background-color 2s;
+  border-radius: 5%;
+  border: 1px solid black;
+}
+.del:hover{
+  background-color: rgb(233, 14, 127);
+  cursor: pointer;
+  color: white;
+  border: 0px solid white;
 }

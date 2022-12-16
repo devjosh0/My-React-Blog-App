@@ -1,0 +1,16 @@
+{
+    "blogs":[
+        {
+            "title":"My First Blog",
+            "body":"Welcome to our channel!",
+            "author":"mario",
+            "id":1
+        },
+        {
+            "title":"Opening Party",
+            "body":"Our channel is about animals",
+            "author":"yoshi",
+            "id":2  
+        }
+    ]
+}
