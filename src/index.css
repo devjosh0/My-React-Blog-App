@@ -63,7 +63,7 @@ margin-bottom: 2em;
   height: 3em;
   width: 10em;
   margin-bottom: 1em;
-  transition: background-color 2s;
+  transition: background-color 2s,color 2s;
   border-radius: 5%;
   border: 1px solid black;
 }

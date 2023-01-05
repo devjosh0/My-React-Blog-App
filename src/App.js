@@ -8,6 +8,7 @@ import Btn from './components/stateful-vs-stateless';
 import Navbar from './components/navbar';
 import Home from './components/homepage';
 import Hub from './components/try';
+import Bloglist from './components/blog-list';
 function App() {
 
   return (

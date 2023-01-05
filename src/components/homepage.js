@@ -1,26 +1,35 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import Bloglist from "./blog-list"
+
 function Home(){
     //useState
-    const [blogs,setBlogs]=useState([
-        {title:'My new website',body:'lorem ipsum...',author:'mario',id:1},
-        {title:'Welcome party',body:'lorem ipsum...',author:'yoshi',id:2},
-        {title:'Web dev top tips',body:'lorem ipsum...',author:'kelvin',id:3},
-        {title:'My new website',body:'lorem ipsum...',author:'john',id:4}
-        
-        
-    ])
-    const handleDelete = (id)=>{
-    const del = blogs.filter(blog=>blog.id !== id);
-    setBlogs(del)
-    }
-    return <div className="home">
+    const [blog,setBlogs]=useState([])
+    //load page
+    const [isPending,setisPending]=useState(true);
+
+   useEffect(()=>{
+    ///we use settimeout get to delay the fetch and see the loading
+  setTimeout(() => {
+    fetch("http://localhost:8000/blog")
+    .then(response=>response.json())
+    .then(json=>setBlogs(json))
+    setisPending(false)
+  }, 1000);
+   })
+    
+    return <div> 
+      {isPending && <h1>loading...</h1>}
+      <Bloglist blog={blog}/>
+    
+        </div>
+    
+    
+    
+  }
       
-      <Bloglist blog={blogs} title="My Blogs" handleDelete={handleDelete}></Bloglist>
-      
-      <Bloglist blog={blogs.filter((log)=>log.author==="mario")} title="Mario Blog"/>
-    </div>
-}
+     
+    
+
 //We first created an array using useState that contain three objects.
 //We printed it using map(), but we created it as a function in blog-list.js, where we use props to access our useState
 
