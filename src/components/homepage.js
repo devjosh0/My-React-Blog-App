@@ -3,22 +3,28 @@ import Bloglist from "./blog-list"
 
 function Home(){
     //useState
-    const [blog,setBlogs]=useState([])
-    //load page
-    const [isPending,setisPending]=useState(true);
-
+    const [blog,setBlogs]=useState([]);
+    //loading
+    const[load,setLoad]=useState(true)
    useEffect(()=>{
-    ///we use settimeout get to delay the fetch and see the loading
-  setTimeout(() => {
-    fetch("http://localhost:8000/blog")
-    .then(response=>response.json())
-    .then(json=>setBlogs(json))
-    setisPending(false)
-  }, 1000);
+    ///this fetch will fetch us the data using the API below
+    setTimeout(()=>{
+      fetch("http://localhost:8000/blog")
+      .then(response=>response.json())
+      .then(json=>setBlogs(json))
+      ///this catch  will handle server error
+  .catch(err=>{
+    console.log(err.message)
+     })
+     //loading stops after fetch data
+      setLoad(false)
+
+    },1000)
+
    })
     
     return <div> 
-      {isPending && <h1>loading...</h1>}
+      {load&&<h1>Loading...</h1>}
       <Bloglist blog={blog}/>
     
         </div>
