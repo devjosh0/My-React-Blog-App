@@ -24,7 +24,7 @@ function Home(){
    })
     
     return <div> 
-      {load&&<h1>Loading...</h1>}
+      {load&&<h1>loading...</h1>}
       <Bloglist blog={blog}/>
     
         </div>
